@@ -1,13 +1,10 @@
 
-
-# ~/spark/bin/spark-submit --master local[*] wc.py "hdfs://localhost:54310/user/oxclo/books/*"
-
 from pyspark import SparkContext, SparkConf
 import sys
 import unicodedata
 
 conf = SparkConf().setAppName("wordCount")
-sc = SparkContext(conf=conf)
+sc = SparkContext(conf=conf).getOrCreate()
 
 
 books = sc.textFile(sys.argv[1])
