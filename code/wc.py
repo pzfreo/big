@@ -10,7 +10,7 @@ findspark.init()
 
 import pyspark
 sc = pyspark.SparkContext.getOrCreate()
-books = sc.textFile("file:///home/big/wc/*.txt")
+books = sc.textFile("file:///home/big/wordcount/*.txt")
 
 split = books.flatMap(lambda line: line.split())
 asc = split.map(u2a)
