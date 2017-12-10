@@ -1,1 +1,1 @@
-Labs PDFs will go here
+Lab PDFs are here
